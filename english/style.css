@@ -1,0 +1,2134 @@
+  @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  /* Global Style Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+  }
+
+  body {
+    font-family: "Raleway", sans-serif;
+    transition: background-color 0.3s;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    z-index: 999;
+  }
+
+  /* Update link colors for better visibility on a lighter background */
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    font-size: 16px;
+  }
+
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: 1000;
+    color: #d19438;
+    font-family: "Cinzel", serif;
+  }
+
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    margin: 0 10px;
+    position: relative;
+  }
+
+  /* Underline Effect */
+  .navbar .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: brown;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .navbar .nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  /* Advanced Language Dropdown */
+  .language-toggle{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    width: 190px;
+    user-select: none;
+}
+
+.language-toggle .select-btn-language,
+.language-toggle .options-language {
+    border: 1px solid white; /* White outline */
+    background: rgba(0, 0, 0, 0.7); /* Dark background with some transparency */
+    color: #fff; /* White text for better visibility */
+}
+
+.language-toggle .select-btn-language{
+    display: flex;
+    height: 45px;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: border-color 0.3s;
+}
+
+.option-language a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.language-toggle .select-btn-language i {
+    transition: transform 0.3s ease; /* Add this line */
+}
+
+.language-toggle.active .select-btn-language i{
+    transform: rotate(-180deg);
+}
+
+.language-toggle .options-language{
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%; 
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 100;
+
+    transition: all 0.3s ease, max-height 0.5s ease; /* Transition for pop-up effect */
+    max-height: 0; /* Initial max-height */
+    overflow: hidden; /* Hide overflow */
+}
+.language-toggle.active .options-language{
+    display: block;
+    max-height: 200px;
+}
+.options-language .option-language{
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 8px;
+    align-items: center;
+    /* background: rgba(255, 255, 255, 0.1); */
+}
+.options-language .option-language:hover{
+    background: rgba(242, 242, 242, 0.1); 
+}
+
+.option-language .option-text-language{
+    font-size: 16px;
+    color: #fff;
+    margin-left: 15px;
+}
+
+.language-toggle .select-btn-language img {
+    height: 30px; /* Adjust size as needed */
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* Adjust the top position as needed */
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 13%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: brown;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .navbar .nav-links.active {
+      display: flex;
+  }
+
+  .navbar .nav-links li {
+      margin: 10px 0;
+  }
+
+  .navbar .menu-icon {
+      display: block;
+      cursor: pointer;
+      font-size: 20px;
+      color: white;
+      margin: 0 3px;
+  }
+
+  .navbar .logo{
+    font-size: 18px;
+    margin: 0 10px;
+  }
+
+  .theme-toggle {
+        margin-right: 20px; /* Adjusted margin for smaller screens */
+    }
+
+    .light-icon,
+    .dark-icon {
+        font-size: 14px; /* Reduced font size for icons */
+    }
+
+    .theme-switch {
+        width: 40px; /* Reduced width for the switch */
+        height: 24px; /* Reduced height for the switch */
+    }
+
+    .theme-switch .theme-slider {
+        border-radius: 20px; /* Adjusted border-radius for the slider */
+    }
+
+    .theme-switch .theme-slider:before {
+        height: 18px; /* Reduced size for the round part of the switch */
+        width: 18px; /* Reduced size for the round part of the switch */
+        left: 3px; /* Adjusted position for the round part of the switch */
+        bottom: 3px; /* Adjusted position for the round part of the switch */
+    }
+
+    .theme-switch input {
+        width: 80px; /* Adjusted width for the input checkbox */
+    }
+
+    .language-toggle .select-btn-language {
+      height: 35px;
+      font-size: 14px;
+      padding: 0 10px;
+  }
+
+  .language-toggle .select-btn-language i {
+      margin-top: 2px;
+  }
+
+  .language-toggle .options-language {
+      padding: 10px;
+      margin-top: 5px;
+      max-height: 150px;
+  }
+
+  .options-language .option-language {
+      height: 45px;
+      padding: 0 5px;
+  }
+
+  .option-language .option-text-language {
+      font-size: 10px;
+      margin-left: 10px;
+  }
+
+  .language-toggle .select-btn-language img {
+      height: 25px;
+      margin-right: 3px;
+  }
+  .language-toggle{
+    margin: 0 10px;
+  }
+  .theme-toggle{
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* Adjust the top position as needed */
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 13%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: brown;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .navbar .nav-links.active {
+      display: flex;
+  }
+
+  .navbar .nav-links li {
+      margin: 10px 0;
+  }
+
+  .navbar .menu-icon {
+      display: block;
+      cursor: pointer;
+      font-size: 16px;
+      color: white;
+      margin: 0 3px;
+  }
+
+  .navbar .logo{
+    font-size: 14px;
+    margin: 0 3px;
+  }
+
+  .theme-toggle {
+        margin-right: 20px; /* Adjusted margin for smaller screens */
+    }
+
+    .theme-switch {
+        width: 40px; /* Reduced width for the switch */
+        height: 24px; /* Reduced height for the switch */
+    }
+
+    .theme-switch .theme-slider {
+        border-radius: 20px; /* Adjusted border-radius for the slider */
+    }
+
+    .theme-switch .theme-slider:before {
+        height: 18px; /* Reduced size for the round part of the switch */
+        width: 18px; /* Reduced size for the round part of the switch */
+        left: 3px; /* Adjusted position for the round part of the switch */
+        bottom: 3px; /* Adjusted position for the round part of the switch */
+    }
+
+    .theme-switch input {
+        width: 80px; /* Adjusted width for the input checkbox */
+    }
+
+    .language-toggle .select-btn-language {
+      height: 35px;
+      font-size: 14px;
+      padding: 0 10px;
+  }
+
+  .language-toggle .select-btn-language i {
+      margin-top: 2px;
+  }
+
+  .language-toggle .options-language {
+      padding: 10px;
+      margin-top: 5px;
+      max-height: 150px;
+  }
+
+  .options-language .option-language {
+      height: 45px;
+      padding: 0 5px;
+  }
+
+  .option-language .option-text-language {
+      font-size: 10px;
+      margin-left: 10px;
+  }
+
+  .language-toggle .select-btn-language img {
+      height: 20px;
+      margin-right: 3px;
+  }
+  .language-toggle{
+    margin: 0 3px;
+    width: auto;
+  }
+  .theme-toggle{
+    margin: 0 3px;
+    height: 20px;
+    width: auto;
+  }
+}
+
+
+/* <=============== STYLES FOR DARK MODE ===============> */
+
+.dark-mode {
+  background-color: #000; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+
+.dark-mode .navbar .nav-links a {
+  color: #ffffff; /* Light text for navigation links */
+}
+
+.dark-mode .language-toggle select,
+.dark-mode .language-chevron i {
+  color: #ffffff; /* Light text for language selector */
+  background: #000; /* Adjusted background for language selector */
+}
+
+.dark-mode .theme-toggle .light-icon,
+.dark-mode .theme-toggle .dark-icon {
+  color: #ffffff; /* Light icons in theme toggle */
+}
+
+.dark-mode .homepage-content h1,
+.dark-mode .homepage-content p {
+  color: #ffffff; /* Light text for homepage content */
+}
+
+.dark-mode #about {
+  background-color: #000; /* Dark background for about section */
+}
+
+.dark-mode .about-content h1,
+.dark-mode .about-content p,
+.dark-mode .about-content button {
+  color: #ffffff; /* Light text and button styles for about section */
+}
+
+.dark-mode #regions .list .item .content,
+.dark-mode #regions .list .item .content p,
+.dark-mode #regions .list .item .content h2 {
+  color: #ffffff; /* Light text for slider content */
+}
+
+.dark-mode #regions .arrows button {
+  background-color: rgba(255, 255, 255, 0.3333333333);
+  color: #fff; /* Dark text for slider arrows */
+}
+
+.dark-mode .thumbnail .item .content {
+  color: #ffffff; /* Light text for slider thumbnails */
+}
+
+.dark-mode #batik-gallery,
+.dark-mode .gallery-header h1,
+.dark-mode .gallery-header p {
+  color: #ffffff; /* Light text for gallery section */
+}
+
+/* Dark Mode Styles for #batik-gallery */
+.dark-mode #batik-gallery {
+  background-color: #000; /* Dark background for dark mode */
+  color: #fff; /* Light text color for dark mode */
+}
+
+.dark-mode .close {
+  color: #fff; /* Light text color for dark mode */
+}
+
+.dark-mode .close:hover {
+  color: #835c22; /* Light text color for dark mode */
+}
+
+.dark-mode .gallery-header h1,
+.dark-mode .gallery-header p {
+  color: #fff; /* Light text color for titles and paragraphs in dark mode */
+}
+
+.dark-mode .filter-controls::before {
+  background-color: #835c22; 
+}
+
+
+.dark-mode #faqs .accordion .accordion-tab input:checked ~ label h3{
+  background: #333;
+  padding: 2px 10px;
+  color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.dark-mode .filter-btn {
+  color: #fff; 
+}
+
+
+.dark-mode .filter-btn:hover:not(.active) {
+  color: #835c22; 
+}
+
+.dark-mode .filter-btn.active{
+  color: #fff;
+}
+
+.dark-mode .gallery-item .item-info {
+  color: #fff; /* Light text color for item info in dark mode */
+}
+
+.dark-mode #batik-fashion {
+  background-color: #000;
+}
+
+.dark-mode #faqs {
+  background-color: #000; /* Dark background for the accordion section */
+}
+
+.dark-mode #faqs .accordion .accordion-tab {
+  background-color: #1a1a1a; /* Slightly lighter black for the tabs */
+}
+
+.dark-mode #faqs .accordion h1,
+.dark-mode #faqs .accordion .accordion-tab .accordion-content p {
+  color: #fff; /* White text for all text in the accordion */
+}
+
+.dark-mode #faqs .accordion .accordion-tab label h3{
+  color: #fff; 
+}
+
+/* Ensure the '+' icon is visible in dark mode */
+.dark-mode #faqs .accordion .accordion-tab label::after {
+  color: rgba(255, 255, 255, 0.7); /* Light color for the '+' icon */
+}
+
+/* Adjusting the checked state of the accordion tab in dark mode */
+.dark-mode #faqs .accordion .accordion-tab input:checked ~ label::after {
+  color: #fff;
+}
+
+.dark-mode footer .footer_social_icon li a,
+.dark-mode footer .footer_menu li a {
+  color: #ccc; /* Adjusted color for footer links */
+}
+
+.dark-mode .wave {
+  background-color: #000; 
+}
+
+.dark-mode .modal-content {
+  background-color: #000; /* Dark background for modal */
+  color: #ffffff; /* Light text for modal */
+}
+
+  /* Switch */
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 60px;
+  }
+
+  /* Style for Sun and Moon Icons */
+  .light-icon {
+    margin-right: 10px; /* Increased margin */
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  .dark-icon {
+    margin-left: 10px; /* Increased margin */
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  /* Style for the switch */
+  .theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  /* Style for the theme-slider (round part of the switch) */
+  .theme-switch .theme-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+
+  .theme-switch .theme-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  /* Style to move the theme-slider to the right when the switch is checked */
+  input:checked + .theme-slider {
+    background-color: #2196F3;
+  }
+
+  input:checked + .theme-slider:before {
+    transform: translateX(26px);
+  }
+
+  /* Hide the default checkbox */
+  .theme-switch input {
+    opacity: 0;
+    width: 100px;
+  }
+
+  .dark-mode {
+    background-color: #333;
+    color: white;
+  }
+
+  /* <=============== HOMEPAGE ===============> */
+
+  #homepage {
+    position: relative;
+    height: 100vh; 
+  }
+
+  #background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video covers the entire section */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place video behind content */
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .homepage-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    text-align: center; /* Center the content */
+    max-width: 800px; /* Max width of content */
+    margin: 0 auto; /* Center content horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .homepage-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .homepage-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+
+  .homepage-content button {
+    background-color: #835c22;
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto; /* Center the button horizontally */
+    border-radius: 50px; /* Rounded corners */
+    font-family: "Raleway", sans-serif; /* Raleway font */
+    font-size: 18px; /* Font size for the button text */
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    overflow: hidden; /* Ensures the pseudo-element does not go outside the button bounds */
+    display: inline-block; /* To enable width management */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for depth */
+  }
+
+  .homepage-content button:hover{
+    background-color: #5e4217;
+  }
+
+  .homepage-content button i {
+    margin-left: 10px; /* Space between text and icon */
+    transition: transform 0.3s ease; /* Smooth transition for moving the icon */
+  }
+
+  .homepage-content button:hover i {
+    transform: translateX(5px); /* Move icon to the right on hover */
+  }
+
+  /* <=============== ABOUT SECTION ===============> */
+
+  #about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8rem 10px; /* Reduced vertical padding */
+    background-color: white;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    position: relative; /* Needed for the positioning of the background image */
+  }
+
+  .about-title {
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -100px;
+    font-family: "Cinzel", serif;
+  }
+
+  #about-model {
+    flex: 1; /* Flex grow */
+    height: 30%; /* Adjust as necessary */
+    width: 200px;
+    margin-right: 20px;
+    position: relative; /* To position the image behind the model */
+    z-index: 2; /* Ensure model is above the image */
+  }
+
+  .about-content {
+    flex: 2; /* Flex grow */
+    text-align: left;
+    padding: 10% 100px;
+  }
+
+  .about-content h1 {
+    font-size: 2rem;
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+
+  .about-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 85%;
+  }
+
+  /* Modern and advanced button styling */
+  .about-content button {
+    padding: 15px 30px;
+    background-color: #835c22;
+    color: white;
+    border: none;
+    border-radius: 50px; /* More rounded edges */
+    cursor: pointer;
+    font-family: "Raleway", sans-serif; /* Raleway font */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    align-self: start;
+    margin-top: 20px;
+  }
+
+  .about-content button:hover {
+    background-color: #5e4217;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+
+  .about-image {
+    margin-left: -250px;
+  }
+
+  @media screen and (max-width: 768px) {
+    #about {
+      padding: 4rem 20px; /* Reduced padding for smaller screens */
+      flex-direction: column;
+      text-align: center;
+  }
+
+    .about-title {
+        margin-top: 0;
+        font-size: 2rem; /* Slightly smaller font size for small screens */
+    }
+
+    .about-title, #about-model, .about-content, .about-image {
+      width: 100%;
+      margin: 0; /* Reset margins for smaller screens */
+  }
+
+    #about-model, .about-image {
+        width: 100%; /* Full width for smaller screens */
+        margin: 0 auto; /* Center align */
+    }
+
+    .about-content {
+        text-align: center; /* Center align text */
+        padding: 10px; /* Reduced padding */
+        flex: none; /* Reset flex grow */
+    }
+
+    .about-content h1 {
+        font-size: 1.8rem; /* Adjust title size */
+    }
+
+    .about-content p {
+        width: 100%; /* Full width for text */
+        font-size: 14px; /* Slightly smaller font size for readability */
+    }
+
+    .about-content button {
+        margin-top: 15px;
+        margin-bottom: 100px;
+    }
+}
+
+  /* <=============== TIMELINE SECTION ===============> */
+
+  #timeline {
+    position: relative;
+    background: #272829;
+    /* overflow: hidden; */
+  }
+
+.slide-timeline {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+
+    transition: opacity 0.5s ease-in-out;
+    animation: zoomOut 15s ease-out forwards;
+}
+
+.slide-bg-timeline {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: zoomOut 15s ease-out forwards;
+}
+
+.slide-bg-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black with transparency */
+    z-index: 1;
+}
+
+.slide-timeline.active {
+    display: block;
+}
+
+@keyframes zoomOut {
+    0% { transform: scale(1.2); }
+    100% { transform: scale(1.1); }
+}
+
+.caption-timeline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 0px;
+    opacity: 0;
+    animation: captionReveal 1s ease forwards;
+}
+
+@keyframes captionReveal {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -40%); /* Start from a slightly lower position */
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%); /* End at the center */
+    }
+}
+
+.batik-timeline-title {
+    display: block; 
+    font-size: 16px;
+    letter-spacing: 10px; 
+    text-align: center;
+    color: #C8AE7D; 
+    font-family: "Raleway", sans-serif;
+    font-weight: bolder;
+}
+
+.caption-timeline h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+    padding: 18px;
+    font-family: "Cinzel", serif;
+}
+
+.caption-timeline p {
+    max-width: 600px;
+    width: 90%;
+    margin: 0px auto;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.5em;
+    font-family: "Raleway", sans-serif;
+}
+
+.arrow-timeline {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 100;
+    background: rgba(0, 0, 0, .1);
+    transform: background 500ms;
+    margin: 0 20px;
+}
+
+.arrow-timeline img {
+    width: 50px;
+}
+
+.arrow-timeline:hover {
+    background: rgba(0, 0, 0, .4);
+}
+
+.left-arrow-timeline {
+    left: 0;
+}
+
+.right-arrow-timeline {
+    right: 0;
+}
+
+.dots-timeline {
+  position: relative;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.dot-timeline {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+.dot-timeline.active {
+  background-color: #C8AE7D; /* Active dot color */
+}
+
+.dot-timeline:hover {
+    background-color: #C8AE7D;
+}
+
+/* Existing styles */
+
+/* Responsive styles for medium and small screens */
+@media screen and (max-width: 768px) {
+  .slide-timeline,
+  .slide-bg-timeline {
+      height: 50vh; /* Adjust height for smaller screens */
+  }
+
+  .caption-timeline h3 {
+      font-size: 32px; /* Smaller font size for headings */
+  }
+
+  .caption-timeline p {
+      font-size: 14px; /* Smaller font size for paragraphs */
+  }
+
+  .arrow-timeline {
+      margin: 0 5px; /* Closer to the edge */
+  }
+
+  .left-arrow-timeline {
+      left: -5px; /* More to the left */
+  }
+
+  .right-arrow-timeline {
+      right: -5px; /* More to the right */
+  }
+
+  .dots-timeline {
+      bottom: 10px; /* Adjust as needed */
+  }
+
+  .dot-timeline {
+      height: 10px;
+      width: 10px; /* Smaller dots */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media screen and (max-width: 480px) {
+  .slide-timeline,
+  .slide-bg-timeline {
+      height: 80vh; /* Even smaller height for very small screens */
+  }
+
+  .caption-timeline h3 {
+      font-size: 24px; /* Further reduced font size for headings */
+  }
+
+  .caption-timeline p {
+      font-size: 12px; /* Further reduced font size for paragraphs */
+  }
+
+  /* Adjust arrow positions further if needed */
+  .left-arrow-timeline {
+      left: -10px;
+  }
+
+  .right-arrow-timeline {
+      right: -10px;
+  }
+}
+
+/* <=============== GALLERY GRID ===============> */
+#batik-gallery {
+  background-color: #ffffff;
+  padding: 5rem 0; /* Adjusted horizontal padding if needed */
+  color: #333;
+  text-align: center;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem; /* Adjust horizontal padding if needed */
+}
+
+.gallery-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Cinzel", serif;
+}
+
+.gallery-header p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+:root {
+  --button-bg-color: #eeeeee;
+  --button-hover-bg-color: #cccccc;
+  --button-color: #333;
+  --button-active-bg-color: #835c22; /* Brown color for the active pill background */
+  --before-left: 0px; /* Initial left position for sliding effect */
+  --before-width: 0px; /* Initial width for sliding effect */
+}
+
+.filter-controls {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  background-color: transparent;
+  color: var(--button-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+  position: relative;
+  border-radius: 50px; /* Pill shape */
+  z-index: 2; /* Above the pseudo-element */
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.filter-controls::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: var(--before-left); /* Controlled by JS */
+  width: var(--before-width); /* Controlled by JS */
+  height: 100%;
+  background-color: var(--button-active-bg-color);
+  border-radius: 50px;
+  transition: left 0.3s ease, width 0.3s ease; /* Smooth transitions for left and width */
+  z-index: 1; /* Below the buttons */
+}
+
+.filter-btn.active {
+  color: #ffffff;
+}
+
+.filter-btn:hover:not(.active) {
+  color: #835c22;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 1rem;
+  padding: 0 100px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  width: calc(20% - 1rem); /* 5 items per row */
+  margin-bottom: 1rem;
+  border-radius: 15px;
+}
+
+.gallery-item img {
+  width: 100%; /* Image fills the width of .gallery-item */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease;
+  display: block;
+  cursor: pointer;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.item-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 0.5rem 0;
+  transition: opacity 0.3s ease;
+  opacity: 1; /* Always show the title */
+}
+
+/* Responsive adjustments for gallery items */
+@media (max-width: 1200px) {
+  .gallery-item {
+      width: calc(55%- 1rem); /* 3 items per row for medium devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+      width: calc(53% - 1rem); /* 3 items per row for small devices */
+  }
+  button.filter-btn {
+    padding: 0.3rem 0.5rem; /* Smaller padding */
+    font-size: 12px; /* Smaller font size for better fit */
+}
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+      width: calc(55% - 1rem); /* 3 items per row for extra small devices */
+  }
+
+  button.filter-btn {
+    padding: 0.1rem 0.2rem; /* Smaller padding */
+    font-size: 12px; /* Smaller font size for better fit */
+}
+}
+
+/* <=============== MODAL ===============> */
+
+/* The Modal (background) */
+.modal {
+display: none;
+position: fixed;
+z-index: 10000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100vh;
+overflow: auto;
+background-color: rgba(0,0,0,0.4);
+overflow: hidden;
+}
+
+/* Modal Content */
+.modal-content {
+position: relative;
+background-color: #fefefe;
+margin: 5% auto;
+border: none;
+width: 60%;
+display: flex;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+border-radius: 10px; /* Modern border-radius */
+transform: translateY(-9%); /* Shift upwards */
+}
+
+/* The Close Button */
+.close {
+color: #aaaaaa;
+position: absolute;
+top: 5px;
+right: 25px;
+font-size: 35px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+color: #835c22;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* Modal Image */
+.modal-image-container {
+width: 50%; /* Half the width of the modal */
+height: auto;
+}
+
+.modal-image {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-top-left-radius: 10px; /* Rounded corners for image */
+border-bottom-left-radius: 10px; /* Rounded corners for image */
+}
+
+/* Modal Description */
+/* Modal Description Styles */
+.modal-text-container {
+width: 50%;
+padding: 20px 40px; /* Increased left and right padding */
+display: flex;
+flex-direction: column;
+justify-content: center;
+max-width: 400px;
+margin: auto;
+}
+
+/* Adjust title and description padding separately if needed */
+.modal-text-container h2, .modal-text-container p {
+padding-left: 20px; /* Additional padding for title and description */
+padding-right: 20px;
+}
+
+.modal-text-container h2 {
+margin-bottom: 15px; /* Space between title and description */
+}
+
+.modal-text-container p {
+margin-bottom: 20px; /* Space between description and button */
+}
+
+/* The Close Button (Modal) */
+/* Styles for the Close Button (#modalCloseBtn) in the Modal */
+#modalCloseBtn {
+padding: 10px 0;
+background-color: #835c22;
+color: white;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+font-size: 16px;
+font-family: 'Raleway', sans-serif;
+margin-top: 20px;
+margin-left: 10px; /* Shift the button a bit to the left */
+transition: background 0.3s;
+}
+
+#modalCloseBtn:hover {
+background-color: #5e4217;
+}
+
+.gallery-item img {
+width: 100%; /* This ensures the image takes up the full width of its container */
+height: 250px; /* This sets a fixed height for all images */
+object-fit: cover; /* This ensures the image covers the area without stretching */
+}
+
+/* Responsive adjustments */
+
+
+  /* <=============== BATIK REGIONS ===============> */
+
+  /* css theme-slider */
+  #regions {
+    height: calc(100vh + 375px);
+    position: relative;
+  }
+
+  #regions .list .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  #regions .list .item img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+      object-fit: cover;
+  }
+
+  #regions .list .item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #000 40%, transparent);
+  }
+
+  #regions .list .item .content {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 800px;
+    max-width: 90%;
+    z-index: 1;
+    color: #fff;
+  }
+
+  #regions .list .item .content p:nth-child(1) {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: #fff;
+  }
+
+  #regions .list .item .content p {
+    margin-top: 35px;
+  }
+
+  #regions .list .item .content h2 {
+    color: #fff;
+    font-size: 100px;
+    margin: 0;
+  }
+
+  #regions .list .item.active {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  @keyframes showContent {
+    to {
+      transform: translateY(0);
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+  #regions .list .item.active p:nth-child(1),
+  #regions .list .item.active h2,
+  #regions .list .item.active p:nth-child(3) {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+  }
+
+  #regions .list .item.active h2 {
+    animation-delay: 1s;
+  }
+
+  #regions .list .item.active p:nth-child(3) {
+    animation-duration: 1.3s;
+  }
+
+  .arrows {
+    position: absolute;
+    bottom: 325px; /* Height of thumbnail + its bottom offset */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for the width of the arrows container */
+    z-index: 100;
+  }
+
+  .arrows button {
+    background-color: rgba(238, 238, 238, 0.3333333333);
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #eee;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .arrows button:hover {
+    background-color: #eee;
+    color: black;
+  }
+
+  #regions .list .item .content .content-button {
+    font-family: "Raleway", sans-serif; /* Raleway font */
+    border-radius: 20px; /* 20px border radius */
+    background-color: #835c22; /* Background color */
+    color: #fff; /* Font color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside the button */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    font-size: 16px; /* Font size */
+    margin-top: 45px; /* Space above the button */
+    transform: translateY(30px); /* Start position for the animation */
+    filter: blur(20px); /* Start blur for the animation */
+    opacity: 0; /* Start opacity for the animation */
+    animation: showContent 0.5s ease-in-out 1 forwards; /* Apply the animation */
+    animation-delay: 1.3s; /* Set the delay for the button animation */
+  }
+
+  #regions .list .item .content .content-button:hover {
+    background-color: #5e4217; /* Background color changes to brown on hover */
+    animation: showContent 0.5s 1.3s ease-in-out 1 forwards;
+  }
+
+  .thumbnail {
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+  }
+
+  .thumbnail::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .thumbnail .item {
+    width: 150px;
+    height: 220px;
+    filter: brightness(0.5);
+    transition: 0.5s;
+    flex-shrink: 0;
+  }
+
+  .thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+      object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .thumbnail .item.active {
+    filter: brightness(1.1);
+  }
+
+  .thumbnail .item .content {
+    position: absolute;
+    inset: auto 10px 10px 10px;
+    color: #fff;
+  }
+
+  /* Existing Styles for Batik Regions */
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  #regions .list .item .content {
+      width: auto; /* Adjust width for smaller screens */
+      padding: 20px; /* Add padding */
+      top: 5%; /* Adjust top position */
+  }
+
+  #regions .list .item .content h2 {
+      font-size: 40px; /* Smaller font size for titles */
+  }
+
+  #regions .list .item .content p {
+      font-size: 14px; /* Smaller font size for paragraphs */
+  }
+
+  .arrows {
+      bottom: 70px; /* Adjust position above thumbnail */
+  }
+
+  .thumbnail {
+      bottom: 30px; /* Adjust bottom position */
+      height: 200px; /* Adjust thumbnail height */
+  }
+
+  .thumbnail .item {
+      width: 100px; /* Adjust thumbnail item width */
+      height: 150px; /* Adjust thumbnail item height */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjust thumbnail position */
+  .thumbnail {
+      bottom: 100px; /* Position thumbnails higher */
+      height: 200px; /* Adjust thumbnail height */
+  }
+
+  /* Adjust arrows position to be above thumbnails */
+  .arrows {
+      bottom: calc(100px + 200px); /* Position above thumbnails */
+      transform: translateX(-50%);
+  }
+
+  /* Additional content adjustments for smaller screens */
+  #regions .list .item .content {
+      width: auto;
+      padding: 10px;
+      top: 5%;
+  }
+
+  #regions .list .item .content h2 {
+      font-size: 40px;
+  }
+
+  #regions .list .item .content p {
+      font-size: 14px;
+  }
+  
+  .thumbnail .item {
+      margin-top: 30px;
+      width: 65px;
+      height: 115px;
+  }
+
+  .thumbnail .item .content {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  #regions .list .item .content h2 {
+      font-size: 30px;
+  }
+
+  .thumbnail {
+      bottom: 250px;
+  }
+
+  .arrows {
+      top: 20px; /* Adjust for different thumbnail height */
+  }
+
+  #regions .list .item{
+    height: 870px;
+  }
+
+  #regions .list .item .content {
+    width: auto;
+}
+}
+
+/* <=============== BATIK FASHION SECTION ===============> */
+
+  #batik-fashion .fashion-header {
+    padding-top: 50px;
+    text-align: center;
+    margin-bottom: 50px; 
+  }
+
+  #batik-fashion .fashion-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px; 
+    font-family: "Cinzel", serif;
+  }
+
+  #batik-fashion .fashion-header p {
+    font-size: 1.2rem;
+    margin-top: 0; 
+    margin-bottom: 30px; 
+  }
+
+  #batik-fashion .cards-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 100px; 
+    padding-bottom: 50px;
+  }
+
+  .batik-card.move-up {
+    margin-top: -50px;
+  }
+
+  .batik-card {
+    width: 280px;
+    height: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+  }
+
+  .batik-card:hover {
+    transform: scale(1.05);
+  }
+
+  .card-content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .batik-card:hover .card-content {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  .card-content h2 {
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    pointer-events: none;
+  }
+
+  .card-content h3 {
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .card-content p {
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+  .card-content a {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #835c22;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .card-content a:hover {
+    background-color: #5e4217;
+  }
+
+  @media screen and (max-width: 768px) {
+    #batik-fashion .cards-row {
+      margin-top: 20px; 
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+/* Adjust as needed */
+    }
+  
+    .batik-card {
+      max-width: none;
+
+       /* Remove max-width for smaller screens */
+    }
+    .batik-card.move-up{
+      margin: 20px 0;
+
+    }
+    .card-content h2 {
+      font-size: 5em; /* Adjust font size for smaller screens */
+      top: -50px; /* Adjust top position for smaller screens */
+      right: 15px; /* Adjust right position for smaller screens */
+    }
+    .modal-content {
+      flex-direction: row;
+      border-radius: 10px;
+      margin-top: 150px; /* Maintain border-radius */
+    }
+    
+    .modal-image-container {
+      width: 1500px;
+      height: auto; /* Full width on smaller screens */
+      border-radius: 0;
+
+      max-height: 400px;
+       /* Reset border-radius for smaller screens */
+    }
+    
+    .modal-text-container{
+      width: 2000px;
+      height : 400px;
+      font-size: 10px;
+      margin-left: -30px;
+    }
+    
+    .modal-image {
+      border-top-left-radius: 10px; /* Rounded corners for image */
+      border-top-right-radius: 10px; /* Rounded corners for image */
+    }
+    
+    .modal-text-container {
+      order: 2; /* Ensure description is below image on smaller screens */
+    }
+    
+    #modalCloseBtn {
+      margin-right: 10px; /* Adjust margin for smaller screens if needed */
+    }
+    
+    .close {
+      top: 0px; /* Adjust close button position */
+      right: 10px; /* Adjust close button position */
+    }
+  }
+  @media screen and (max-width: 480px) {
+
+    #batik-fashion{
+      margin-top: -200px;
+    }
+
+    #batik-fashion .cards-row {
+      flex-direction: column;
+      align-items: center;
+/* Adjust as needed */
+    }
+  
+    .batik-card {
+      max-width: none;
+
+       /* Remove max-width for smaller screens */
+    }
+    .batik-card.move-up{
+      margin: 20px 0;
+
+    }
+    .card-content h2 {
+      font-size: 5em; /* Adjust font size for smaller screens */
+      top: -50px; /* Adjust top position for smaller screens */
+      right: 15px; /* Adjust right position for smaller screens */
+    }
+    .modal-content {
+      flex-direction: column;
+      border-radius: 10px;
+      margin-top: 150px; /* Maintain border-radius */
+    }
+    
+    .modal-image-container {
+      width: auto;
+      height: auto; /* Full width on smaller screens */
+      border-radius: 0;
+
+       /* Reset border-radius for smaller screens */
+    }
+    
+    .modal-text-container{
+      width: 300px;
+      height : auto;
+      font-size: 10px;
+      margin-left: -30px;
+    }
+    
+    .modal-image {
+      border-top-left-radius: 10px; /* Rounded corners for image */
+      border-top-right-radius: 10px; /* Rounded corners for image */
+    }
+    
+    .modal-text-container {
+      order: 2; /* Ensure description is below image on smaller screens */
+    }
+    
+    #modalCloseBtn {
+      margin-right: 10px; /* Adjust margin for smaller screens if needed */
+    }
+    
+    .close {
+      top: 0px; /* Adjust close button position */
+      right: 10px; /* Adjust close button position */
+    }
+  }
+
+/* <=============== BATIK FAQs ===============> */
+#faqs {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically for smaller content */
+  padding-top: 50px; /* Add space at the top */
+  min-height: 100vh;
+  margin-bottom: 50px; /* Ensure it takes at least the full viewport height */
+}
+
+.accordion{
+    max-width: 600px; /* Set a max width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.accordion h1{
+    color: #333;
+    text-align: center;
+    font-family: "Cinzel", serif;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.accordion .accordion-tab{
+    position: relative;
+    background: #fff;
+    padding: 0px 20px 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion .accordion-tab input{
+    appearance: none;
+}
+
+.accordion .accordion-tab label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion .accordion-tab label::after{
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.1);
+    transition: transform 1s;
+}
+
+.accordion .accordion-tab:hover label::after{
+    color: #333;
+}
+
+.accordion .accordion-tab input:checked ~ label::after{
+    transform: rotate(135deg);
+    color: #fff;
+}
+
+.accordion .accordion-tab label h2{
+    width: 40px;
+    height: 40px;
+    /* background: #333; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    margin-right: 10px;
+    user-select: none;
+}
+
+.accordion .accordion-tab input:checked ~ label h2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 8em;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.accordion .accordion-tab:nth-child(2) label h2{
+    background: linear-gradient(135deg, #835c22, #5e4217);
+}
+
+.accordion .accordion-tab:nth-child(3) label h2{
+  background: linear-gradient(135deg, #835c22, #694d1e);
+}
+
+.accordion .accordion-tab:nth-child(4) label h2{
+  background: linear-gradient(135deg, #835c22, #5e4217);
+}
+
+.accordion .accordion-tab:nth-child(5) label h2{
+  background: linear-gradient(135deg, #835c22, #5e4217);
+}
+
+.accordion .accordion-tab:nth-child(6) label h2{
+  background: linear-gradient(135deg, #835c22, #5e4217);
+}
+
+.accordion .accordion-tab label h3{
+    position: relative;
+    font-weight: 500;
+    color: #333;
+    z-index: 10;
+    border-radius: 20px;
+}
+
+.accordion .accordion-tab input:checked ~ label h3{
+    background: #fff;
+    padding: 2px 10px;
+    color: #333;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.accordion .accordion-tab .accordion-content{
+    max-height: 0;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.accordion .accordion-tab input:checked ~ .accordion-content{
+    max-height: 100vh;
+}
+
+.accordion .accordion-tab .accordion-content p{
+    position: relative;
+    padding: 10px 0;
+    color: #333;
+    z-index: 10;
+}
+
+.accordion .accordion-tab input:checked ~ .accordion-content p{
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .accordion .accordion-tab label h2 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .accordion .accordion-tab label h2 {
+    font-size: 0.8rem;
+  }
+}
+
+/* <=============== FOOTER ===============> */
+
+footer {
+  position: relative;
+  width: 100%;
+  background: #402300;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+footer .logos {
+  font-size: 28px;
+  font-weight: 1000;
+  color: #d19438;
+  font-family: "Cinzel", serif;
+  margin-bottom: 10px;
+  margin-top: -5px;
+}
+footer .footer_social_icon, footer .footer_menu {
+  position: relative;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  margin: 10px 0;
+}
+
+footer .footer_social_icon li, footer .footer_menu li {
+  list-style: none;
+}
+footer .footer_social_icon li a {
+  font-size: 2em;
+  color: #ccc;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .footer_social_icon li a:hover {
+  transform: translateY(-15px);
+  color: #E48F45;
+}
+
+footer .footer_menu li a {
+  font-size: 1.2em;
+  color: #ccc;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  text-decoration: none;
+  border-bottom: 2px solid transparent; /* Garis bawah awal dengan warna transparan */
+  transition: border-bottom 0.5s ease;
+}
+footer .footer_menu li a:hover {
+  opacity: 1;
+  color: #fff;
+  border-bottom: 2px solid #E48F45;
+}
+
+.footer_menu p {
+  color : #eee;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+/*wave and animation*/
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("main/main-assets/footer/wave-fix.png");
+  background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 0;
+  animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+  0%{
+    background-position-x: 1000px; 
+  }
+  100%{
+    background-position-x: 0px; 
+  }
+}
+
+@keyframes animateWave_02 {
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: 1000px; 
+  }
+}
+
+/* Existing styles... */
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+
+  footer {
+    padding: 20px 10px; /* Adjust padding for smaller screens */
+    margin-top: 50px; /* Adjust margin-top for smaller screens */
+  }
+
+  .logos {
+    font-size: 24px; /* Adjust font size for smaller screens */
+    margin-top: 5px; /* Adjust margin-top for smaller screens */
+  }
+
+  .footer_social_icon,
+  .footer_menu {
+    flex-direction: column; /* Stack items vertically for smaller screens */
+    align-items: center; /* Center items horizontally for smaller screens */
+  }
+
+  .footer_social_icon li,
+  .footer_menu li {
+    margin: 10px 0; /* Add margin between items for smaller screens */
+  }
+
+  .footer_social_icon li a,
+  .footer_menu li a {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+    margin: 0; /* Remove horizontal margin for smaller screens */
+  }
+
+  .footer_menu li a {
+    border-bottom: none; /* Remove border-bottom for smaller screens */
+  }
+
+  .footer_menu p {
+    margin-top: 10px; /* Adjust margin-top for smaller screens */
+  }
+
+  /* Adjust other styles as needed for smaller screens */
+}
+

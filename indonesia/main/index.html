@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css" integrity="sha512-yF/VfQv/eGOwfFv8xZO3yB1+cNShHUMT/E6ZSXUqj6oXZKXm2t/2hGqMx4Gd4jw8LXNX7G/+Y4y2pQ0Fg1ME4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>IndoCulture</title>
+    <link rel="shortcut icon" href="main-assets/web-icon/batik-favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- <=============== NAVBAR ===============> -->
+
+    <nav class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="logo">IndoCulture</div>
+        <ul class="nav-links">
+            <li><a href="#homepage">Rumah</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#timeline">Linimasa</a></li>
+            <li><a href="#batik-gallery">Galeri</a></li>
+            <li><a href="#regions">Wilayah</a></li>
+            <li><a href="#batik-fashion">Fashion</a></li>
+            <li><a href="#faqs">Pertanyaan Umum</a></li>
+            <!-- More links here -->
+        </ul>
+
+        <div class="language-toggle">
+            <div class="select-btn-language">
+                <img src="main-assets/language/indonesia-flag.png" alt="" class="flag-icon">
+                <span class="sBtn-text-language">Indonesia</span>
+                <i class="bx bx-chevron-down"></i>
+            </div>
+    
+            <ul class="options-language">
+                <a href="/indonesia/main/index.html"><li class="option-language">
+                    
+                        <img src="main-assets/language/indonesia-flag.png" alt="">
+                        <span class="option-text-language">Indonesia</span>
+                    
+                </li></a>
+                <a href="/english/main/index.html"><li class="option-language">
+                    
+                        <img src="main-assets/language/united-states-flag.png" alt="">
+                        <span class="option-text-language">English</span>
+                    
+                </li></a>
+            </ul>
+        </div>        
+        
+        <div class="theme-toggle">
+            <span class="light-icon"><box-icon name='sun' color='#ffffff' ></box-icon></span> <!-- Sun Icon -->
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle-checkbox">
+                <span class="theme-slider round"></span>
+            </label>
+            <span class="dark-icon"><box-icon name='moon' type='solid' color='#ffffff' ></box-icon></span> <!-- Moon Icon -->
+        </div>
+
+    </nav>
+
+    <!-- <=============== HOMEPAGE ===============> -->
+
+    <section id="homepage">
+        <video autoplay muted loop id="background-video">
+            <source src="main-assets/video/batik-video-background.mp4" muted loop type="video/mp4">
+        </video>
+        
+        <div class="overlay"></div>
+    
+        <div class="homepage-content">
+            <h1>Temukan Indonesia: Perjalanan Melalui Budaya dan Warisan</h1>
+             <p>Jelajahi Keanggunan Batik yang Rumit: Mengungkap Warisan Budaya Indonesia, Menjalin Sejarah ke dalam Ekspresi Modern.</p>
+            <button onclick="location.href='#timeline'">Jelajahi Lebih Lanjut <i class='bx bx-right-arrow-alt'></i></button>
+        </button>
+        </div>
+    </section>
+
+    <!-- <=============== ABOUT SECTION ===============> -->
+    
+    <section id="about">
+        <div class="about-title">Tentang</div> 
+        <div id="about-model"></div> 
+        <div class="about-image"><img src="main-assets/image/world.png" alt="Deskripsi Gambar"></div> 
+        <div class="about-content">
+            <h1>Batik: Permadani Global Indonesia</h1>
+             <p>
+                 Temukan Batik: Permata Seni Global Indonesia. Jelajahi dunia tempat kerajinan kuno berpadu dengan gaya kontemporer,
+                 merangkai cerita dalam benang merah yang memikat imajinasi dunia.
+                 Rangkullah keindahan Batik, sebuah tradisi abadi yang kini menghiasi panggung mode global.
+             </p>
+            
+            <a href="about.html"></a>
+                <button onclick="location.href='#batik-gallery'">Pelajari Lebih Lanjut</button>
+            </a>
+        </div>
+    </section>    
+ 
+
+    <!-- <=============== LINIMASA BATIK ===============> -->
+
+    <div id="timeline">
+        <div class="arrow-timeline l" onclick="previousSlide()">
+            <img src="main-assets/timeline/left-arrow-timeline.png" alt="l">
+        </div>
+        <div class="slide-timeline">
+            <div class="slide-bg-timeline" style="background-image: url('main-assets/timeline/6th-century-timeline.png');"></div>
+             <div class="caption-timeline">
+                <span class="batik-timeline-title">LINIMASA BATIK</span>
+                  <h3>Sebelum Abad ke-6</h3>
+                  <p>Asal Usul Kuno: Batik, yang berakar kuat pada budaya Indonesia, memulai perjalanannya sebagai bentuk seni mistis dan spiritual.</p>
+             </div>
+        </div>
+        <div class="slide-timeline slide-2">
+            <div class="slide-bg-timeline" style="background-image: url('main-assets/timeline/17th-century-timeline.png');"></div>
+            <div class="caption-timeline">
+                <span class="batik-timeline-title">LINIMASA BATIK</span>
+                <h3>Abad ke-17</h3>
+                 <p> Daya Tarik Global: Pertemuan Perusahaan Hindia Timur Belanda dengan Batik memicu minat internasional, memadukan budaya dan teknik.</p>
+            </div>
+       </div>
+       <div class="slide-timeline slide-3">
+            <div class="slide-bg-timeline" style="background-image: url('main-assets/timeline/19th-century-timeline.png');"></div>
+            <div class="caption-timeline">
+                <span class="batik-timeline-title">LINIMASA BATIK</span>
+                <h3>Abad ke-19</h3>
+                 <p>Lompatan Teknologi: Pengenalan cap (tutup) tembaga mengubah produksi Batik, memungkinkan produksi massal dan desain yang beragam.</p>
+            </div>
+       </div>
+       <div class="slide-timeline slide-4">
+            <div class="slide-bg-timeline" style="background-image: url('main-assets/timeline/2009-timeline.png');"></div>
+            <div class="caption-timeline">
+                <span class="batik-timeline-title">LINIMASA BATIK</span>
+                <h3>2009</h3>
+                 <p>Warisan Dunia: UNESCO menyatakan Batik Indonesia sebagai Karya Agung Warisan Kemanusiaan Lisan dan Nonbendawi, dan mengakui signifikansi budayanya.</p>
+            </div>
+       </div>
+       <div class="slide-timeline slide-5">
+            <div class="slide-bg-timeline" style="background-image: url('main-assets/timeline/2023-timeline.png');"></div>
+            <div class="caption-timeline">
+                <span class="batik-timeline-title">LINIMASA BATIK</span>
+                <h3>2023</h3>
+                <p>Evolusi Kontemporer: Batik tumbuh subur di era digital, memadukan metode tradisional dengan desain modern, sehingga memperluas daya tarik globalnya.</p>
+            </div>
+       </div>
+       <div class="arrow-timeline right-arrow-timeline" onclick="nextSlide()">
+            <img src="main-assets/timeline/right-arrow-timeline.png" alt="r">
+        </div>
+    </div>
+
+    <div class="dots-timeline">
+        <span class="dot-timeline" onclick="currentSlide(1)"></span>
+        <span class="dot-timeline" onclick="currentSlide(2)"></span>
+        <span class="dot-timeline" onclick="currentSlide(3)"></span>
+        <span class="dot-timeline" onclick="currentSlide(4)"></span>
+        <span class="dot-timeline" onclick="currentSlide(5)"></span>
+    </div>
+
+    <!-- <=============== BATIK GALLERY ===============> -->
+
+    <section id="batik-gallery">
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <h1>Tipe Tipe Batik</h1>
+                <p>Jelajahi dunia batik Indonesia yang dinamis, perpaduan harmonis antara tradisi dan seni</p>
+            </div>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pesisir"> Pesisir </button>
+                <button class="filter-btn" data-filter="tuban"> Tuban </button>
+                <button class="filter-btn" data-filter="madura"> Madura </button>
+                <button class="filter-btn" data-filter="jogja"> Jogja </button>
+                <button class="filter-btn" data-filter="banyumas"> Banyumas </button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="banyumas" data-title="Batik Banyumas" data-description="Batik Banyumas adalah salah satu bentuk seni kain tradisional dari daerah Banyumas di Jawa Tengah, Indonesia, yang terkenal dengan corak khasnya yang sering menggambarkan tema alam dan kehidupan pedesaan. Ciri khas gaya batik ini adalah warnanya yang berani dan desainnya yang unik, yang mencakup pola geometris dan penggambaran flora dan fauna, yang mencerminkan kekayaan warisan budaya daerah tersebut.">
+                    <img src="main-assets/image/banyumas1.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3> Batik Banyumas </h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="pesisir" data-title="Batik Pesisir" data-description="Batik Pesisir menampilkan kekayaan warna cerah yang mencolok dan motif-motif yang khas dari budaya Tionghoa dan Arab. Gaya ini menonjolkan keberanian dalam penggunaan warna-warna mencolok seperti merah, kuning, dan biru yang mencerminkan kegembiraan dan kehidupan masyarakat pesisir..">
+                    <img src="main-assets/image/pesisir1-fixed.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3> Batik Pesisir</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="jogja" data-title="Batik Jogja" data-description="Batik Jogja yang berasal dari Yogyakarta, Indonesia, terkenal dengan batik tulis tradisional yang menampilkan pola rumit dan perpaduan budaya dan sejarah yang kaya. Tekstil-tekstil ini dibedakan berdasarkan motif-motif klasiknya, yang sering kali mencerminkan mitologi dan alam Jawa, yang dibuat dengan pewarna alami dan bersahaja.">
+                    <img src="main-assets/image/jogja1.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3> Batik Jogja </h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="madura" data-title="Batik Madura" data-description="Batik Madura, yang berasal dari pulau Madura di Indonesia, terkenal dengan palet warnanya yang cerah dan berani, sering kali menampilkan kontras yang mencolok antara merah, biru, dan kuning. Tekstil yang diwarnai dengan tangan ini memiliki pola yang rumit, sering kali terinspirasi oleh flora dan fauna lokal, dengan perpaduan unik antara teknik artistik tradisional dan kontemporer.">
+                    <img src="main-assets/image/madura1.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Madura</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="tuban" data-title="Batik Tuban" data-description="Batik Tuban, kain tradisional asal Tuban, Jawa Timur, terkenal dengan motifnya yang khas dan berwarna gelap, seringkali terinspirasi dari cerita rakyat setempat dan unsur alam. Varian batik ini menonjol karena teknik pewarnaannya yang unik, yang menggunakan nila alami, sehingga menghasilkan warna yang dalam dan bergema yang melambangkan kekayaan warisan budaya daerah tersebut.">
+                    <img src="main-assets/image/tuban1.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Tuban</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="pesisir" data-title="Batik Pesisir" data-description="Batik Pesisir, yang terkenal dengan warna-warna cerah dan motif laut yang rumit, mencerminkan kekayaan pertukaran budaya di sepanjang wilayah pesisir Jawa. Gaya ini secara unik memadukan pengaruh lokal dan asing, sering kali menggabungkan unsur-unsur seni Tiongkok, Eropa, dan bahkan Timur Tengah, menciptakan beragam permadani penceritaan visual.">
+                    <img src="main-assets/image/pesisir2.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Pesisir</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="madura" data-title="Batik Madura" data-description="Batik Madura adalah seni tekstil tradisional Indonesia, terkenal dengan warna-warna cerah dan pola yang berani, sering kali menampilkan motif bunga dan geometris. Berasal dari Pulau Madura, batik ini memiliki ciri khas dari teknik pewarnaan tahan lilin yang unik sehingga menghasilkan garis-garis tajam dan estetika yang khas.">
+                    <img src="main-assets/image/madura2.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Madura</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="banyumas" data-title="Batik Banyumas" data-description="Batik Banyumas, berbeda dalam pendekatan artistiknya, memadukan motif Jawa dengan palet unik, sebagian besar menampilkan warna-warna alami dan desain rumit yang terinspirasi dari alam. Gaya ini, yang berasal dari Jawa Tengah, Indonesia, terkenal karena keanggunan pedesaan dan kekayaan budayanya, yang mencerminkan warisan lokal dan alam sekitar wilayah Banyumas.">
+                    <img src="main-assets/image/banyumas2.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Banyumas</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="tuban" data-title="Batik Tuban" data-description="Batik Tuban, berasal dari Jawa Timur, Indonesia, terkenal dengan motif 'klasik' kuno dan palet khas yang terutama menampilkan nila dan sogan (coklat). Seni kain tradisional ini menggunakan teknik pewarnaan tahan lilin yang unik, yang mencerminkan kekayaan warisan budaya dan sejarah maritim Tuban.">
+                    <img src="main-assets/image/tuban2.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Tuban</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="jogja" data-title="Batik Jogja" data-description="Batik Jogja, yang terkenal dengan keanggunan halus dan motif tradisional Jawa, menampilkan perpaduan harmonis antara pola klasik dan desain kontemporer, sering digambarkan dalam palet khas nila, coklat, dan putih. Varian batik dari Yogyakarta ini terkenal karena detailnya yang rumit dan citra simbolisnya, yang mencerminkan kekayaan warisan budaya daerah tersebut.">
+                    <img src="main-assets/image/jogja2.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Jogja</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- The Modal -->
+   <div id="batikModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+      <div class="modal-image-container">
+        <img src="" alt="Batik Image" id="modalImage" class="modal-image">
+      </div>
+      
+      <!-- Modal Text Container -->
+      <div class="modal-text-container">
+        <h2 id="modalTitle">Modal Title</h2>
+        <p id="modalDesc">Here is the modal description text...</p>
+        <!-- Close button at the bottom of the modal -->
+        <button id="modalCloseBtn">Close</button>
+      </div>
+    </div>
+  
+  </div>       
+
+    <!-- <=============== BATIK REGION ===============> -->
+    
+    <section id="regions">
+        <!-- list Items -->
+        <div class="list">
+            <div class="item active">
+                <img src="main-assets/banner/banner-pesisir.jpg">
+                <div class="content">
+                    <p>
+                        Cirebon, Pekalongan, dan Lasem
+                    </p>
+                    <h2> Batik Pesisir</h2>
+                    <p>
+                        Batik Pesisiran memiliki pengaruh dari budaya Tionghoa dan Arab. Cirebon terkenal dengan motif-motif geometris yang kaya warna, Pekalongan dikenal dengan motif-motif yang lebih beragam dan berkembang, sementara Lasem memiliki motif dengan warna-warna cerah dan klasik.
+                    </p>
+                    <a href="artikel/pesisir.html">
+                    <button class="content-button">Pelajari Lebih Lanjut</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/banner-jogja.jpg">
+                <div class="content">
+                    <p>Yogyakarta dan Surakarta (Solo)</p>
+                    <h2> Batik Jogja </h2>
+                    <p>
+                        Batik dari daerah ini memiliki gaya khas Jawa yang lebih klasik dan tradisional. Batik Yogyakarta cenderung memiliki motif yang lebih halus dan elegan, sementara batik dari Solo cenderung lebih berani dan kuat dalam motifnya.
+                    </p>
+                    <a href="artikel/jogja.html">
+                    <button class="content-button">Pelajari Lebih Lanjut</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/banner-madura.jpg">
+                <div class="content">
+                    <p> Pulau Madura</p>
+                    <h2>Batik Madura </h2>
+                    <p>
+                        Batik Madura memiliki ciri khas pada penggunaan warna yang cerah dan motif yang cukup sederhana. Motifnya sering kali terinspirasi dari alam dan tumbuhan.
+                    </p>
+                    <a href="artikel/madura.html">
+                    <button class="content-button">Pelajari Lebih Lanjut</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/banner-tuban.jpg">
+                <div class="content">
+                    <p> Tuban </p>
+                    <h2>Batik Tuban </h2>
+                    <p>
+                        Batik ini memiliki kekhasan dalam motif-motif geometris dan ukiran yang rumit serta berwarna cerah.
+                    </p>
+                    <a href="artikel/tuban.html">
+                    <button class="content-button">Pelajari Lebih Lanjut</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/banner-banyumas.jpg">
+                <div class="content">
+                    <p>Banyumas</p>
+                    <h2>Batik Banyumas </h2>
+                    <p>
+                        Batik dari Banyumas dikenal dengan motif-motif yang lebih sederhana dengan warna yang lembut dan alamiah.
+                    </p>
+                    <a href="artikel/banyumas.html">
+                    <button class="content-button">Pelajari Lebih Lanjut</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- button arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="main-assets/banner/pesisir.jpg">
+                <div class="content">
+                    Batik Pesisiran
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/jogja.jpg">
+                <div class="content">
+                    Batik Jogja
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/madura.jpg">
+                <div class="content">
+                    Batik Madura
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/tuban.jpg">
+                <div class="content">
+                    Batik Tuban 
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/banyumas.jpg">
+                <div class="content">
+                    Batik Banyumas
+                </div>
+            </div>
+        </div>
+    </section>   
+
+    <!-- <=============== BATIK IN FASHION ===============> -->
+
+    <section id="batik-fashion">
+        <div class="fashion-header">
+            <h1>Batik in Fashion</h1>
+            <p>Indonesian batik blends timeless art with modern style in a vibrant fashion fusion.</p>
+        </div>
+       
+        <div class="cards-row">
+            <div class="batik-card move-up" style="background-image: url('main-assets/batik-fashion/man.jpg');">
+                <div class="card-content">
+                    <h2>01</h2>
+                    <h3>Pakaian Batik Formal</h3>
+                     <p>
+                         Pakaian batik formal biasanya terdiri dari kain bermotif rumit...
+                     </p>
+                     <a onclick="openModal('main-assets/batik-fashion/man.jpg', 'Pakaian Batik Formal', 'Pakaian batik formal biasanya terdiri dari kain bermotif rumit, sering kali menampilkan motif tradisional Indonesia. Pakaian ini dirancang dengan elegan, umumnya berupa kemeja lengan panjang untuk pria dan gaun atau kebaya untuk wanita, dan biasanya terbuat dari bahan katun atau sutra berkualitas tinggi. biasanya dipakai saat ada acara formal')">Baca Selengkapnya</a>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="batik-card" style="background-image: url('main-assets/batik-fashion/woman.jpeg');">
+                    <div class="card-content">
+                        <h2>02</h2>
+                        <h3>Pakaian Batik Kasual</h3>
+                         <p>
+                             Pakaian batik kasual biasanya menampilkan pakaian yang nyaman dan santai seperti kemeja ringan...
+                         </p>
+                         <a onclick="openModal('main-assets/batik-fashion/woman.jpeg', 'Pakaian Batik Kasual', 'Pakaian batik kasual biasanya menampilkan pakaian yang nyaman dan santai seperti kemeja ringan, blus, atau gaun, yang dihias dengan pola batik tradisional. Pola ini sering kali menampilkan desain yang rumit dan simetris dalam berbagai warna, menampilkan motif budaya dan elemen alam seperti bunga atau bentuk geometris.')">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="batik-card move-up"  style="background-image: url('main-assets/batik-fashion/modern-fusion-batik.jpg');">
+                    <div class="card-content">
+                        <h2>03</h2>
+                        <h3>Perpaduan Batik Modern</h3>
+                         <p>
+                             Batik fusion modern merupakan gaya seni kontemporer yang memadukan
+                             teknik membatik tradisional dengan estetika modern...
+                         </p>
+                         <a onclick="openModal('main-assets/batik-fashion/modern-fusion-batik.jpg', 'Modern Batik Fusion', 'Modern Batik Fusion adalah gaya artistik kontemporer yang memadukan teknik batik tradisional dengan estetika dan bahan modern . Hal ini sering kali melibatkan eksperimen dengan kain yang tidak konvensional, warna-warna cerah, dan menggabungkan elemen dari berbagai budaya global, menciptakan tampilan segar dan eklektik yang mendobrak batas-batas desain batik tradisional.')">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faqs">
+        <div class="accordion">
+            <h1>Pertanyaan yang Sering Diajukan</h1>
+
+            <div class="accordion-tab">
+                <input type="checkbox" name="acc" id="acc1">
+                <label for="acc1">
+                <h2>01</h2>
+                <h3>Bagaimana perkembangan Batik Indonesia secara historis?</h3>
+                </label>
+                <div class="accordion-content">
+                    <p>
+                        Batik Indonesia telah bertransformasi dari desain yang dipengaruhi Hindu-Buddha menjadi perpaduan Islam,
+                         Gaya Eropa dan modern, mencerminkan kekayaan sejarah budaya Indonesia.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-tab">
+                <input type="checkbox" name="acc" id="acc2">
+                <label for="acc2">
+                <h2>02</h2>
+                <h3>Apa yang dilambangkan oleh motif Batik Jawa modern?</h3>
+                </label>
+                <div class="accordion-content">
+                    <p>
+                        Motif Batik Jawa Modern terinspirasi dari alam dan kehidupan sehari-hari. Motif Kawung melambangkan kehidupan manusia, sedangkan motif Parang Rusak melambangkan kekuasaan dan kekuatan. Motif Mega Mendung melambangkan harapan dan kebahagiaan dll.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-tab">
+                <input type="checkbox" name="acc" id="acc3">
+                <label for="acc3">
+                <h2>03</h2>
+                <h3>Apa dampak teknologi modern terhadap pembuatan Batik?</h3>
+                </label>
+                <div class="accordion-content">
+                    <p>
+                        Teknologi modern telah menyederhanakan penciptaan desain, meningkatkan efisiensi produksi, teknik pewarnaan dan memperluas jangkauan pasar Batik secara global.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-tab">
+                <input type="checkbox" name="acc" id="acc4">
+                <label for="acc4">
+                <h2>04</h2>
+                <h3>Apa perbedaan gaya Batik pesisir dan pedalaman?</h3>
+                </label>
+                <div class="accordion-content">
+                    <p>
+                        Batik Pesisir sering kali menggabungkan pengaruh budaya eksternal dan warna-warna cerah, sedangkan Batik pedalaman cenderung menggunakan motif tradisional dan palet warna yang lebih kalem.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-tab">
+                <input type="checkbox" name="acc" id="acc5">
+                <label for="acc5">
+                <h2>05</h2>
+                <h3>Apa dampak pengakuan UNESCO terhadap Batik?</h3>
+                </label>
+                <div class="accordion-content">
+                    <p>
+                        Pengakuan UNESCO terhadap Batik sebagai Warisan Budaya Tak Benda telah meningkatkan kesadaran akan pentingnya batik, sehingga mengarah pada upaya pelestarian dan dukungan yang lebih baik bagi masyarakat lokal. Pengakuan ini juga menarik lebih banyak minat secara global, sehingga memberikan manfaat bagi Batik secara ekonomi dan budaya.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+
+        <div class="logos">IndoCulture</div>
+
+        <ul class="footer_menu">
+            <li><a href="#homepage">Rumah</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#timeline">Linimasa</a></li>
+            <li><a href="#batik-gallery">Galeri</a></li>
+            <li><a href="#regions">Wilayah</a></li>
+            <li><a href="#batik-fashion">Fashion</a></li>
+            <li><a href="#faqs">Pertanyaan Umum</a></li>
+        </ul>
+
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="JS/vanilla-tilt.js"></script>
+    <script src="JS/card-tilt.js"></script>
+    <script src="JS/dark.js"></script>
+    <script src="JS/language.js"></script>
+    <script src="JS/about-model.js"></script>
+    <script src="JS/carousel.js"></script>
+    <script src="JS/art-music.js"></script>
+    <script src="JS/filter-btn.js"></script>
+    <script src="JS/filter.js"></script>
+    <script src="JS/cards.js"></script>
+    <script src="JS/timeline.js"></script>
+    <script src="JS/modal.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script>
+        function toggleMenu() {
+            var navLinks = document.querySelector('.navbar .nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+
+</body>
+</html>

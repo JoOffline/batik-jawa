@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css" integrity="sha512-yF/VfQv/eGOwfFv8xZO3yB1+cNShHUMT/E6ZSXUqj6oXZKXm2t/2hGqMx4Gd4jw8LXNX7G/+Y4y2pQ0Fg1ME4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Indonesian Cultural Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- <=============== NAVBAR ===============> -->
+
+    <nav class="navbar">
+        <div class="logo">IndoCulture</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#cultural-insights">Cultural Insights</a></li>
+            <!-- More links here -->
+        </ul>
+        <div class="language-toggle">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="id">Indonesian</option>
+                <span class="language-chevron"><i class='bx bx-chevron-down'></i></span>
+            </select>
+        </div>        
+        
+        <div class="theme-toggle">
+            <span class="light-icon"><box-icon name='sun' color='#ffffff' ></box-icon></span> <!-- Sun Icon -->
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle-checkbox">
+                <span class="theme-slider round"></span>
+            </label>
+            <span class="dark-icon"><box-icon name='moon' type='solid' color='#ffffff' ></box-icon></span> <!-- Moon Icon -->
+        </div>
+
+    </nav>
+
+    <!-- <=============== HOMEPAGE ===============> -->
+
+    <section class="homepage">
+        <img src="assets/banner/banner.jpg" width="100%">
+        
+        <div class="overlay"></div>
+    </section>
+
+    <!-- <=============== CULTURAL INSGIHTS ===============> -->
+    
+    <section id="about">
+        <div class="batik-overview">
+            <div class="batik-title">Cultural Insights of Batik</div>  
+        
+            <div class="batik-section">
+                <div class="batik-text">
+                    <div class="batik-section-title"><b>Origin and History</b></div>
+                    <div class="batik-description">
+                        Batik, an ancient fabric art form, originated in Indonesia, 
+                        predominantly believed to have its roots in Java. Over centuries, 
+                        its influence has spread across various Indonesian islands. It has 
+                        evolved into a significant cultural emblem, not only as a textile but 
+                        also as a symbol of status, ethnic pride, and artistic expression.
+                    </div>
+                </div>
+                <div class="batik-image">
+                    <img src="assets/insight/origin-of-batik.png" alt="Origin and History of Batik">
+                </div>
+            </div>
+        
+            <div class="batik-section">
+                <div class="batik-image">
+                    <img src="assets/insight/batik-manufacture.jpg" alt="Batik Manufacturing Process">
+                </div>
+                <div class="batik-text">
+                    <div class="batik-section-title"><b>Manufacturing Process</b></div>
+                    <div class="batik-manufacturing-step">
+                        <p>1. <b>Choice of Fabric</b>: Common fabrics used include cotton, silk, or rayon.</p>
+                        <p>2. <b>Drawing the Motif</b>: Patterns can be hand-drawn or applied using stamps.</p>
+                        <p>3. <b>Application of Wax</b>: Hot wax is applied to the areas of the fabric that are not intended to be colored.</p>
+                        <p>4. <b>Coloring</b>: The fabric is dyed in specific hues. The wax shields the designated areas from absorbing color.</p>
+                        <p>5. <b>Cleaning</b>: Wax is either melted or washed away to reveal the intricate motifs.</p>
+                    </div>
+                </div>
+            </div>
+        
+        
+            <div class="batik-section">
+                <div class="batik-text">
+                    <div class="batik-section-title"><b>Symbolic Significance</b></div>
+                    <div class="batik-significance">
+                        Each batik motif holds specific meanings, often linked to cultural values, 
+                        traditions, and beliefs. Some motifs symbolize bravery, fertility, prosperity, among other concepts.
+                    </div>
+                </div>
+                <div class="batik-image">
+                    <img src="assets/insight/batik-symbol.png" alt="Symbolic Significance of Batik">
+                </div>
+            </div>
+        
+        
+            <div class="batik-section">
+                <div class="batik-image">
+                    <img src="assets/insight/batik-types.png" alt="Types of Batik">
+                </div>
+                <div class="batik-text">
+                    <div class="batik-section-title"><b>Types of Batik</b></div>
+                    <div class="batik-types">
+                        <p>1. <b>Hand-Drawn Batik (Batik Tulis)</b>: Created manually, using hands to draw patterns and apply wax.</p>
+                        <p>2. <b>Stamped Batik (Batik Cap)</b>: Utilizes stamps to apply wax on the fabric. This method is quicker than hand-drawn batik.</p>
+                        <p>3. <b>Printed Batik</b>: Mass-produced using modern printing technology.</p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>                
+    </section>
+
+    <!-- <=============== PLACES ===============> -->
+    
+    <section class="slider">
+        <!-- list Items -->
+        <div class="list">
+            <div class="item active">
+                <img src="assets/banner/banner-pesisir.jpg">
+                <div class="content">
+                    <p>
+                        Cirebon, Pekalongan, dan Lasem
+                    </p>
+                    <h2> Batik Pesisir</h2>
+                    <p>
+                        Batik Pesisiran memiliki pengaruh dari budaya Tionghoa dan Arab. Cirebon terkenal dengan motif-motif geometris yang kaya warna, Pekalongan dikenal dengan motif-motif yang lebih beragam dan berkembang, sementara Lasem memiliki motif dengan warna-warna cerah dan klasik.
+                    </p>
+                    <a href="pesisir.html">
+                    <button class="content-button">Learn More</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/banner/banner-jogja.jpg">
+                <div class="content">
+                    <p>Yogyakarta dan Surakarta (Solo)</p>
+                    <h2> Batik Jogja </h2>
+                    <p>
+                        Batik dari daerah ini memiliki gaya khas Jawa yang lebih klasik dan tradisional. Batik Yogyakarta cenderung memiliki motif yang lebih halus dan elegan, sementara batik dari Solo cenderung lebih berani dan kuat dalam motifnya.
+                    </p>
+                    <a href="jogja.html">
+                    <button class="content-button">Learn More</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/banner/banner-madura.jpg">
+                <div class="content">
+                    <p> Pulau Madura</p>
+                    <h2>Batik Madura </h2>
+                    <p>
+                        Batik Madura memiliki ciri khas pada penggunaan warna yang cerah dan motif yang cukup sederhana. Motifnya sering kali terinspirasi dari alam dan tumbuhan.
+                    </p>
+                    <a href="madura.html">
+                    <button class="content-button">Learn More</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/banner/banner-tuban.jpg">
+                <div class="content">
+                    <p> Tuban </p>
+                    <h2>Batik Tuban </h2>
+                    <p>
+                        Batik ini memiliki kekhasan dalam motif-motif geometris dan ukiran yang rumit serta berwarna cerah.
+                    </p>
+                    <a href="tuban.html">
+                    <button class="content-button">Learn More</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/banner/banner-banyumas.jpg">
+                <div class="content">
+                    <p>Banyumas</p>
+                    <h2>Batik Banyumas </h2>
+                    <p>
+                        Batik dari Banyumas dikenal dengan motif-motif yang lebih sederhana dengan warna yang lembut dan alamiah.
+                    </p>
+                    <a href="banyumas.html">
+                    <button class="content-button">Learn More</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- button arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="assets/banner/pesisir.jpg">
+                <div class="content">
+                    Batik Pesisiran
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/banner/jogja.jpg">
+                <div class="content">
+                    Batik Jogja
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/banner/madura.jpg">
+                <div class="content">
+                    Batik Madura
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/banner/tuban.jpg">
+                <div class="content">
+                    Batik Tuban 
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/banner/banyumas.jpg">
+                <div class="content">
+                    Batik Banyumas
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="footer_social_icon">
+          <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        
+        <ul class="footer_menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+
+    <script src="JS/dark.js"></script>
+    <script src="JS/language.js"></script>
+    <script src="JS/about-model.js"></script>
+    <script src="JS/carousel.js"></script>
+    <script src="JS/art-music.js"></script>
+    <script src="JS/filter-btn.js"></script>
+    <script src="JS/filter.js"></script>
+    <script src="JS/insight-scrollReveal.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+
+</body>
+</html>

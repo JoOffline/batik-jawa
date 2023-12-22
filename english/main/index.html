@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css" integrity="sha512-yF/VfQv/eGOwfFv8xZO3yB1+cNShHUMT/E6ZSXUqj6oXZKXm2t/2hGqMx4Gd4jw8LXNX7G/+Y4y2pQ0Fg1ME4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>IndoCulture</title>
+    <link rel="shortcut icon" href="main-assets/web-icon/batik-favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- <=============== NAVBAR ===============> -->
+
+    <nav class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="logo">IndoCulture</div>
+        <ul class="nav-links">
+            <li><a href="#homepage">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#batik-gallery">Gallery</a></li>
+            <li><a href="#regions">Regions</a></li>
+            <li><a href="#batik-fashion">Fashion</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <!-- More links here -->
+        </ul>
+
+        <div class="language-toggle">
+            <div class="select-btn-language">
+                <img src="main-assets/language/united-states-flag.png" alt="" class="flag-icon">
+                <span class="sBtn-text-language">English</span>
+                <i class="bx bx-chevron-down"></i>
+            </div>
+    
+            <ul class="options-language">
+                <a href="/indonesia/main/index.html"><li class="option-language">
+                    
+                        <img src="main-assets/language/indonesia-flag.png" alt="">
+                        <span class="option-text-language">Indonesia</span>
+                    
+                </li></a>
+                <a href="/english/main/index.html"><li class="option-language">
+                    
+                        <img src="main-assets/language/united-states-flag.png" alt="">
+                        <span class="option-text-language">English</span>
+                    
+                </li></a>
+            </ul>
+        </div>        
+        
+        <div class="theme-toggle">
+            <span class="light-icon"><box-icon name='sun' color='#ffffff' ></box-icon></span> <!-- Sun Icon -->
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle-checkbox">
+                <span class="theme-slider round"></span>
+            </label>
+            <span class="dark-icon"><box-icon name='moon' type='solid' color='#ffffff' ></box-icon></span> <!-- Moon Icon -->
+        </div>
+
+    </nav>
+
+    <!-- <=============== HOMEPAGE ===============> -->
+
+    <section id="homepage">
+        <video autoplay muted loop id="background-video">
+            <source src="main-assets/video/batik-video-background.mp4" muted loop type="video/mp4">
+        </video>
+        
+        <div class="overlay"></div>
+    
+        <div class="homepage-content">
+            <h1>Discover Indonesia: A Journey Through Culture and Heritage</h1>
+            <p>Explore the Intricate Elegance of Batik: Unraveling Indonesia's Cultural Heritage, Weaving History into Modern Expression.</p>
+            <button onclick="location.href='#timeline'">Explore More <i class='bx bx-right-arrow-alt'></i></button>
+        </button>
+        </div>
+    </section>
+
+    <!-- <=============== ABOUT SECTION ===============> -->
+    
+    <section id="about">
+        <div class="about-title">About</div> 
+        <div id="about-model"></div> 
+        <div class="about-image"><img src="main-assets/image/world.png" alt="Deskripsi Gambar"></div> 
+        <div class="about-content">
+            <h1>Batik: Indonesia's Global Tapestry</h1>
+            <p>
+                Discover Batik: Indonesia's Global Art Gem. Explore a world where ancient craft meets contemporary style, 
+                weaving stories in vibrant threads that captivate the world's imagination. 
+                Embrace the beauty of Batik, a timeless tradition now adorning the global fashion stage.
+            </p>
+            
+            <a href="about.html"></a>
+                <button onclick="location.href='#batik-gallery'">Learn More</button>
+            </a>
+        </div>
+    </section>    
+ 
+
+    <!-- <=============== BATIK TIMELINE ===============> -->
+
+    <div id="timeline">
+        <div class="arrow-timeline l" onclick="previousSlide()">
+            <img src="main-assets/timeline/left-arrow-timeline.png" alt="l">
+        </div>
+        <div class="slide-timeline">
+            <div class="slide-bg-timeline" style="background-image: url('main-assets/timeline/6th-century-timeline.png');"></div>
+             <div class="caption-timeline">
+                <span class="batik-timeline-title">BATIK TIMELINE</span>
+                 <h3>Before 6th Century</h3>
+                 <p>Ancient Origins: Batik, deeply rooted in Indonesian culture, begins its journey as a mystical and spiritual art form.</p>
+             </div>
+        </div>
+        <div class="slide-timeline slide-2">
+            <div class="slide-bg-timeline" style="background-image: url('main-assets/timeline/17th-century-timeline.png');"></div>
+            <div class="caption-timeline">
+                <span class="batik-timeline-title">BATIK TIMELINE</span>
+                <h3>17th Century</h3>
+                <p> Global Fascination: The Dutch East India Company's encounter with Batik sparks international interest, blending cultures and techniques.</p>
+            </div>
+       </div>
+       <div class="slide-timeline slide-3">
+            <div class="slide-bg-timeline" style="background-image: url('main-assets/timeline/19th-century-timeline.png');"></div>
+            <div class="caption-timeline">
+                <span class="batik-timeline-title">BATIK TIMELINE</span>
+                <h3>19th Century</h3>
+                <p>Technological Leap: The introduction of the copper stamp (cap) transforms Batik production, enabling mass production and diverse designs.</p>
+            </div>
+       </div>
+       <div class="slide-timeline slide-4">
+            <div class="slide-bg-timeline" style="background-image: url('main-assets/timeline/2009-timeline.png');"></div>
+            <div class="caption-timeline">
+                <span class="batik-timeline-title">BATIK TIMELINE</span>
+                <h3>2009</h3>
+                <p>World Heritage: UNESCO declares Indonesian Batik a Masterpiece of Oral and Intangible Heritage of Humanity, acknowledging its cultural significance.</p>
+            </div>
+       </div>
+       <div class="slide-timeline slide-5">
+            <div class="slide-bg-timeline" style="background-image: url('main-assets/timeline/2023-timeline.png');"></div>
+            <div class="caption-timeline">
+                <span class="batik-timeline-title">BATIK TIMELINE</span>
+                <h3>2023</h3>
+                <p>Contemporary Evolution: Batik thrives in the digital era, marrying traditional methods with modern design, expanding its global appeal.</p>
+            </div>
+       </div>
+       <div class="arrow-timeline right-arrow-timeline" onclick="nextSlide()">
+            <img src="main-assets/timeline/right-arrow-timeline.png" alt="r">
+        </div>
+    </div>
+
+    <div class="dots-timeline">
+        <span class="dot-timeline" onclick="currentSlide(1)"></span>
+        <span class="dot-timeline" onclick="currentSlide(2)"></span>
+        <span class="dot-timeline" onclick="currentSlide(3)"></span>
+        <span class="dot-timeline" onclick="currentSlide(4)"></span>
+        <span class="dot-timeline" onclick="currentSlide(5)"></span>
+    </div>
+
+    <!-- <=============== BATIK GALLERY ===============> -->
+
+    <section id="batik-gallery">
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <h1>Types of Batik</h1>
+                <p>Explore the vibrant world of Indonesian batik, a harmonious blend of tradition and artistry</p>
+            </div>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pesisir"> Pesisir </button>
+                <button class="filter-btn" data-filter="tuban"> Tuban </button>
+                <button class="filter-btn" data-filter="madura"> Madura </button>
+                <button class="filter-btn" data-filter="jogja"> Jogja </button>
+                <button class="filter-btn" data-filter="banyumas"> Banyumas </button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="banyumas" data-title="Batik Banyumas" data-description="Batik Banyumas is a traditional fabric art form from the Banyumas region in Central Java, Indonesia, renowned for its distinctive patterns that often depict natural and rural life themes. This batik style is characterized by its bold colors and unique designs, which include geometric patterns and stylized depictions of flora and fauna, reflecting the rich cultural heritage of the area.">
+                    <img src="main-assets/image/banyumas1.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3> Batik Banyumas </h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="pesisir" data-title="Batik Pesisir" data-description="Batik Banyumas is a traditional fabric art form from the Banyumas region in Central Java, Indonesia, renowned for its distinctive patterns that often depict natural and rural life themes. This batik style is characterized by its bold colors and unique designs, which include geometric patterns and stylized depictions of flora and fauna, reflecting the rich cultural heritage of the area.">
+                    <img src="main-assets/image/pesisir1-fixed.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3> Batik Pesisir</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="jogja" data-title="Batik Jogja" data-description="Batik Jogja, originating from Yogyakarta, Indonesia, is renowned for its traditional hand-drawn batik featuring intricate patterns and a rich blend of culture and history. These textiles are distinguished by their classic motifs, often reflecting Javanese mythology and nature, rendered in earthy, natural dyes.">
+                    <img src="main-assets/image/jogja1.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3> Batik Jogja </h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="madura" data-title="Batik Madura" data-description="Batik Madura, originating from the Indonesian island of Madura, is renowned for its vivid and bold color palette, often featuring a striking contrast of reds, blues, and yellows. These hand-dyed textiles are distinguished by their intricate patterns, often inspired by local flora and fauna, rendered with a unique blend of traditional and contemporary artistic techniques.">
+                    <img src="main-assets/image/madura1.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Madura</h3>
+                    </div>
+                </div>
+
+                
+                
+                <div class="gallery-item" data-category="tuban" data-title="Batik Tuban" data-description="Batik Tuban, a traditional fabric from Tuban, East Java, is renowned for its distinctive, dark-colored motifs, often inspired by local folklore and natural elements. This batik variant stands out for its unique dyeing technique, which involves natural indigo, creating deep, resonant hues that symbolize the rich cultural heritage of the region.">
+                    <img src="main-assets/image/tuban1.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Tuban</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="pesisir" data-title="Batik Pesisir" data-description="Batik Pesisir, renowned for its vibrant colors and intricate marine motifs, reflects the rich cultural interchange along Java's coastal areas. This style uniquely blends local and foreign influences, often incorporating elements from Chinese, European, and even Middle Eastern art, creating a diverse tapestry of visual storytelling.">
+                    <img src="main-assets/image/pesisir2.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Pesisir</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="madura" data-title="Batik Madura" data-description="Batik Madura is a traditional Indonesian textile art, renowned for its vibrant colors and bold patterns, often featuring floral and geometric motifs. Originating from Madura Island, this batik is distinguished by its unique wax-resist dyeing technique, which creates crisp lines and a distinctive aesthetic.">
+                    <img src="main-assets/image/madura2.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Madura</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="banyumas" data-title="Batik Banyumas" data-description="Batik Banyumas, distinct in its artistic approach, combines Javanese motifs with a unique palette, predominantly featuring earthy tones and intricate, nature-inspired designs. This style, originating from Central Java, Indonesia, is celebrated for its rustic elegance and cultural richness, reflecting the local heritage and natural surroundings of the Banyumas region.">
+                    <img src="main-assets/image/banyumas2.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Banyumas</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="tuban" data-title="Batik Tuban" data-description="Batik Tuban, hailing from East Java, Indonesia, is distinguished by its ancient 'klasik' motifs and a distinctive palette primarily featuring indigo and sogan (brown). This traditional fabric art employs a unique wax-resist dyeing technique, reflecting Tuban's rich cultural heritage and maritime history.">
+                    <img src="main-assets/image/tuban2.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Tuban</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="jogja" data-title="Batik Jogja" data-description="Batik Jogja, renowned for its subtle elegance and traditional Javanese motifs, features a harmonious blend of classic patterns and contemporary designs, often depicted in a distinctive palette of indigo, brown, and white. This batik variant from Yogyakarta is celebrated for its intricate detailing and symbolic imagery, reflecting the rich cultural heritage of the region.">
+                    <img src="main-assets/image/jogja2.jpg" alt="Indonesian Art">
+                    <div class="item-info">
+                        <h3>Batik Jogja</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- The Modal -->
+   <div id="batikModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+      <div class="modal-image-container">
+        <img src="" alt="Batik Image" id="modalImage" class="modal-image">
+      </div>
+      
+      <!-- Modal Text Container -->
+      <div class="modal-text-container">
+        <h2 id="modalTitle">Modal Title</h2>
+        <p id="modalDesc">Here is the modal description text...</p>
+        <!-- Close button at the bottom of the modal -->
+        <button id="modalCloseBtn">Close</button>
+      </div>
+    </div>
+  
+  </div>       
+
+    <!-- <=============== BATIK REGION ===============> -->
+    
+    <section id="regions">
+        <!-- list Items -->
+        <div class="list">
+            <div class="item active">
+                <img src="main-assets/banner/banner-pesisir.jpg">
+                <div class="content">
+                    <p>
+                        Cirebon, Pekalongan, and Lasem
+                    </p>
+                    <h2> Batik Pesisir</h2>
+                    <p>
+                        Pesisiran Batik, which reflects the influence of Chinese and Arab culture,
+                         displays typical variations in various regions. For example, Cirebon is famous
+                         With its colorful geometric motifs, Pekalongan is known for its motifs
+                         which is more diverse and continues to develop, while Lasem stands out with its motifs
+                         which has bright colors and a classic feel.
+                    </p>
+                    <a href="artikel/pesisir.html">
+                    <button class="content-button">Learn More</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/banner-jogja.jpg">
+                <div class="content">
+                    <p>Yogyakarta and Surakarta (Solo)</p>
+                    <h2> Batik Jogja </h2>
+                    <p>
+                        Batik from this area has a more classic and traditional Javanese style.
+                         Yogyakarta Batik tends to have more subtle and elegant motifs, while
+                         batik from Solo tends to be bolder and stronger in its motifs. Yogyakarta Motif
+                         often featuring subtle nuances and intricate details, while Solo motifs feature prominently
+                         Bold lines and striking colors.
+                    </p>
+                    <a href="artikel/jogja.html">
+                    <button class="content-button">Learn More</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/banner-madura.jpg">
+                <div class="content">
+                    <p> Madura</p>
+                    <h2>Batik Madura </h2>
+                    <p>
+                        This batik is distinctive in its geometric motifs and intricate carvings and bright colors,
+                         reflects the rich culture and local traditions of Madura. Madurese Batik motifs often appear
+                         a combination of bold and bright colors such as red, yellow and blue, which symbolize courage
+                         and the joy of the Madurese people, as well as displaying unique elements of nature and daily life.
+                    </p>
+                    <a href="artikel/madura.html">
+                    <button class="content-button">Learn More</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/banner-tuban.jpg">
+                <div class="content">
+                    <p> Tuban </p>
+                    <h2>Batik Tuban </h2>
+                    <p>
+                        This batik is unique in its geometric motifs and complex carvings
+                         brightly colored, typical of Tuban which is famous for its unique design. Batik Motif
+                         Tuban often depicts local flora and fauna, as well as local folklore, which
+                         displayed in bright and attractive color compositions.
+                    </p>
+                    <a href="artikel/tuban.html">
+                    <button class="content-button">Learn More</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/banner-banyumas.jpg">
+                <div class="content">
+                    <p>Banyumas</p>
+                    <h2>Batik Banyumas </h2>
+                    <p>
+                        Batik from Banyumas is known for its simpler motifs with soft and natural colors,
+                         reflects the beauty and simplicity of the natural surroundings. Banyumas batik motifs often display patterns
+                         which is inspired by rural environments, such as views of rice fields and mountains, combined with
+                         warm and natural colors.
+                    </p>
+                    <a href="artikel/banyumas.html">
+                    <button class="content-button">Learn More</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- button arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="main-assets/banner/pesisir.jpg">
+                <div class="content">
+                    Batik Pesisiran
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/jogja.jpg">
+                <div class="content">
+                    Batik Jogja
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/madura.jpg">
+                <div class="content">
+                    Batik Madura
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/tuban.jpg">
+                <div class="content">
+                    Batik Tuban 
+                </div>
+            </div>
+            <div class="item">
+                <img src="main-assets/banner/banyumas.jpg">
+                <div class="content">
+                    Batik Banyumas
+                </div>
+            </div>
+        </div>
+    </section>   
+
+    <!-- <=============== BATIK IN FASHION ===============> -->
+
+    <section id="batik-fashion">
+        <div class="fashion-header">
+            <h1>Batik in Fashion</h1>
+            <p>Indonesian batik blends timeless art with modern style in a vibrant fashion fusion.</p>
+        </div>
+       
+        <div class="cards-row">
+            <div class="batik-card move-up" style="background-image: url('main-assets/batik-fashion/man.jpg');">
+                <div class="card-content">
+                    <h2>01</h2>
+                    <h3>Formal Batik Wear</h3>
+                    <p>
+                        Formal batik wear typically consists of intricately patterned fabric...
+                    </p>
+                    <a onclick="openModal('main-assets/batik-fashion/man.jpg', 'Formal Batik Wear', 'Formal batik wear typically consists of intricately patterned fabric, often featuring traditional Indonesian motifs. These garments are elegantly tailored, commonly in the form of long-sleeve shirts for men and dresses or kebayas for women, and are usually made from high-quality cotton or silk. usually worn when there are formal events')">Read More</a>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="batik-card" style="background-image: url('main-assets/batik-fashion/woman.jpeg');">
+                    <div class="card-content">
+                        <h2>02</h2>
+                        <h3>Casual Batik Wear</h3>
+                        <p>
+                            Casual batik wear typically features comfortable, relaxed-fit clothing such as lightweight shirts...
+                        </p>
+                        <a onclick="openModal('main-assets/batik-fashion/woman.jpeg', 'Casual Batik Wear', 'Casual batik wear typically features comfortable, relaxed-fit clothing such as lightweight shirts, blouses, or dresses, adorned with traditional batik patterns. These patterns often display intricate, symmetrical designs in a range of colors, showcasing cultural motifs and natural elements like flowers or geometric shapes.')">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="batik-card move-up"  style="background-image: url('main-assets/batik-fashion/modern-fusion-batik.jpg');">
+                    <div class="card-content">
+                        <h2>03</h2>
+                        <h3>Modern Batik Fusion</h3>
+                        <p>
+                            Modern batik fusion is a contemporary artistic style that blends 
+                            traditional batik techniques with modern aesthetics...
+                        </p>
+                        <a onclick="openModal('main-assets/batik-fashion/modern-fusion-batik.jpg', 'Modern Batik Fusion', 'Modern batik fusion is a contemporary artistic style that blends traditional batik techniques with modern aesthetics and materials. It often involves experimenting with unconventional fabrics, vibrant colors, and incorporates elements from various global cultures, creating a fresh and eclectic look that pushes the boundaries of traditional batik design.')">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faqs">
+        <div class="accordion">
+            <h1>Frequently Asked Questions</h1>
+
+            <div class="accordion-tab">
+                <input type="checkbox" name="acc" id="acc1">
+                <label for="acc1">
+                <h2>01</h2>
+                <h3>How has Indonesian Batik evolved historically?</h3>
+                </label>
+                <div class="accordion-content">
+                    <p>
+                        Indonesian Batik has transformed from Hindu-Buddhist influenced designs to a blend of Islamic, 
+                        European, and modern styles, reflecting Indonesia's rich cultural history.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-tab">
+                <input type="checkbox" name="acc" id="acc2">
+                <label for="acc2">
+                <h2>02</h2>
+                <h3>What do modern Javanese Batik motifs symbolize?</h3>
+                </label>
+                <div class="accordion-content">
+                    <p>
+                        Modern Javanese Batik motifs are inspired by nature and everyday life. The Kawung motif is a symbol of human life, while the Parang Rusak motif represents power and strength. The Mega Mendung motif is a symbol of hope and happiness etc.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-tab">
+                <input type="checkbox" name="acc" id="acc3">
+                <label for="acc3">
+                <h2>03</h2>
+                <h3>What is modern technology's impact on Batik making?</h3>
+                </label>
+                <div class="accordion-content">
+                    <p>
+                        Modern technology has simplified design creation, improved production efficiency, dyeing techniques and expanded Batik's market reach globally.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-tab">
+                <input type="checkbox" name="acc" id="acc4">
+                <label for="acc4">
+                <h2>04</h2>
+                <h3>How do coastal and inland Batik styles differ?</h3>
+                </label>
+                <div class="accordion-content">
+                    <p>
+                        Coastal Batik often incorporates external cultural influences and vibrant colors, while inland Batik leans towards traditional motifs and more subdued color palettes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-tab">
+                <input type="checkbox" name="acc" id="acc5">
+                <label for="acc5">
+                <h2>05</h2>
+                <h3>What effects has UNESCO's recognition had on Batik?</h3>
+                </label>
+                <div class="accordion-content">
+                    <p>
+                        UNESCO recognizing Batik as Intangible Cultural Heritage has boosted awareness about its significance, leading to better preservation efforts and support for local communities. This acknowledgment also attracts more interest globally, benefiting Batik economically and culturally.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+
+        <div class="logos">IndoCulture</div>
+
+        <ul class="footer_menu">
+          <li><a href="#homepage">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#batik-gallery">Gallery</a></li>
+            <li><a href="#regions">Regions</a></li>
+            <li><a href="#batik-fashion">Fashion</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+        </ul>
+
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="JS/vanilla-tilt.js"></script>
+    <script src="JS/card-tilt.js"></script>
+    <script src="JS/dark.js"></script>
+    <script src="JS/language.js"></script>
+    <script src="JS/about-model.js"></script>
+    <script src="JS/carousel.js"></script>
+    <script src="JS/art-music.js"></script>
+    <script src="JS/filter-btn.js"></script>
+    <script src="JS/filter.js"></script>
+    <script src="JS/cards.js"></script>
+    <script src="JS/timeline.js"></script>
+    <script src="JS/modal.js"></script>
+    <script>
+        function toggleMenu() {
+            var navLinks = document.querySelector('.navbar .nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+
+</body>
+</html>
